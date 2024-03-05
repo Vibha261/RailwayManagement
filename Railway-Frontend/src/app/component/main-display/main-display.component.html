@@ -1,0 +1,23 @@
+<div *ngIf="showMainContent">
+    <div class="main-container">
+        <header>
+            <img class="header-logo" src="./../../../assets/TrainLogo.png" alt="Railway Logo" />
+            <div class="header-items">
+                <button type="submit" (click)="openSignInDialog()">Sign In</button>
+                <button type="submit" (click)="openSignUpDialog()">Sign Up</button>
+            </div>
+        </header>
+        <div class="container-items">
+            <div class="search-routes-container">
+                <app-search-routes></app-search-routes>
+            </div>
+            <div class="container-headings">
+                <h1>Indian Railways</h1>
+            </div>
+        </div>
+    </div>
+    <div class="menu-container">
+        <app-menu></app-menu>
+    </div>
+    <app-footer></app-footer>
+</div>

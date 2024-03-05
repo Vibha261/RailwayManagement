@@ -1,0 +1,28 @@
+<header class="d-flex flex-row justify-content-between">
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Customer Service</p>
+</header>
+<div class="main-content-container">
+    <form [formGroup]="customerServiceForm" (submit)="onSubmit()" class="customer-service-form">
+        <h1>Customer Service</h1>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Query</mat-label>
+            <textarea matInput formControlName="query"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Suggestions</mat-label>
+            <textarea matInput formControlName="suggestions"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+</div>
+<app-footer></app-footer>

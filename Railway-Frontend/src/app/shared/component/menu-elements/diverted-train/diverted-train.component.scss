@@ -1,0 +1,95 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: navy;
+
+    img {
+        width: auto;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 600;
+
+        a {
+            text-decoration: none;
+            font-weight: 200;
+        }
+    }
+}
+
+.main-content-container {
+    background-image: url("../../../../../assets/stationbackground.png");
+    background-size: cover;
+    min-height: 70vh;
+    height: auto;
+    width: auto;
+}
+
+.diverted-trains-container {
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    background-color: navy;
+    color: aliceblue;
+    padding: 20px;
+    font-size: 30px;
+    margin: 0px;
+
+}
+
+.diverted-trains-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.diverted-trains-list-content {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card {
+    width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    color: navy;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+mat-card-title {
+    font-size: 20px;
+    padding: 20px 0px;
+}
+
+mat-card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}

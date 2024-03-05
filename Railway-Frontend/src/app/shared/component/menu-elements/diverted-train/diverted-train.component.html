@@ -1,0 +1,29 @@
+<header>
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Diverted Train</p>
+</header>
+<h2> Today's Diverted Trains</h2>
+<div class="main-content-container">
+    <div class="diverted-trains-container">
+        <div class="diverted-trains-list">
+            <mat-card *ngFor="let train of divertedtrains">
+                <mat-card-header>
+                    <mat-card-title>{{train.trainNumber}} - {{train.trainName}}</mat-card-title>
+                    <mat-card-subtitle>Diverted on {{train.date}}</mat-card-subtitle>
+                </mat-card-header>
+                <div class="diverted-trains-list-content">
+                    <mat-card-content>
+                        <p>{{train.from}}</p><mat-icon>trending_flat</mat-icon>
+                        <p>{{train.to}}</p>
+                    </mat-card-content>
+                    <mat-card-content style="color: red;">
+                        <p>{{train.dIvertedFrom}}</p><mat-icon>trending_flat</mat-icon>
+                        <p>{{train.divertedTo}}</p>
+                    </mat-card-content>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

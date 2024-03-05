@@ -1,0 +1,94 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: navy;
+
+    img {
+        width: auto;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 600;
+
+        a {
+            text-decoration: none;
+            font-weight: 200;
+        }
+    }
+}
+
+.main-content-container {
+    background-image: url("../../../../../assets/stationbackground.png");
+    background-size: cover;
+    min-height: 80vh;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: navy;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 600px;
+    gap: 10px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+mat-form-field {
+    width: 100%;
+    height: 56px;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+    width: 20%;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+mat-card {
+    max-width: 900px;
+    background-color: rgb(255, 255, 255);
+    color: navy;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 900px;
+    height: 500px;
+}
+
+mat-card-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        height: 400px;
+        width: auto;
+    }
+}

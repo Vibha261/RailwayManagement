@@ -1,0 +1,46 @@
+<header class="d-flex flex-row justify-content-between">
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Search By Station Code</p>
+</header>
+<div class="form-container">
+    <form [formGroup]="searchByStationForm" (submit)="getTrainList()">
+        <mat-form-field appearance="outline">
+            <mat-label>Station Code</mat-label>
+            <input matInput type="text" id="stationCode" formControlName="stationCode" name="stationCode">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit"><mat-icon>search</mat-icon></button>
+    </form>
+</div>
+<div class="main-content-container">
+    <div *ngIf="trains" class="staion-train-container">
+        <div class="card">
+            <div class="card-header">
+                <h1>{{trainsOnStation[0].stationName}}</h1>
+            </div>
+            <div class="card-body">
+                <table class="station-train-table">
+                    <tr>
+                        <th>Train Number</th>
+                        <th>Train Name</th>
+                        <th>Arrival Time</th>
+                        <th>Departure Time</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Halt</th>
+                    </tr>
+                    <tr *ngFor="let station of trainsOnStation">
+                        <td>{{ station.trainNumber }}</td>
+                        <td>{{ station.trainName }}</td>
+                        <td>{{ station.arrivalTime }}</td>
+                        <td>{{ station.departureTime }}</td>
+                        <td>{{ station.sourceStation }}</td>
+                        <td>{{ station.destinationStation }}</td>
+                        <td>{{ station.haltTime }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

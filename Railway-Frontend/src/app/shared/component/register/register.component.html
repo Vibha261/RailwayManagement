@@ -1,0 +1,25 @@
+<form [formGroup]="registerForm" (submit)="onSignUp()">
+    <h1>Register New User</h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" formControlName="email">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput type="text" formControlName="phoneNumber">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput type="text" formControlName="userName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Register</button>
+    <button mat-raised-button color="accent" (click)="onOldUser()">Old User</button>
+</form>

@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" (submit)="onSignIn()">
+    <h1>Sign In</h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput type="text" formControlName="userName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" (click)="onSignIn()">Sign In</button>
+</form>
+
+
+<!-- <p class="underline-hover" (click)="dialogRef.close(true)">New User? Sign Up here.</p> -->

@@ -1,0 +1,93 @@
+<header>
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a>><a routerLink="dashboard">{{trainDetails.userName}}</a> > Booking</p>
+</header>
+
+<div class="booking-container">
+    <h2>Booking Details</h2>
+    <div class="train-details" *ngIf="trainDetails">
+        <div class="train-details-container">
+            <div class="flex flex-row gap">
+                <p>{{trainDetails.trainNumber}}</p>
+                <p>{{trainDetails.trainName}}</p>
+            </div>
+            <div class="flex flex-row space-between">
+                <div>
+                    <p>From Station: {{trainDetails.fromStation}}</p>
+                    <p>From Station Arrival Time: {{trainDetails.fromStationArrivalTime}}</p>
+                    <p>From Station Departure Time: {{trainDetails.fromStationDepartureTime}}</p>
+                </div>
+                <div>
+                    <p>To Station: {{trainDetails.toStation}}</p>
+                    <p>To Station Arrival Time: {{trainDetails.toStationArrivalTime}}</p>
+                    <p>To Station Departure Time: {{trainDetails.toStationDepartureTime}}</p>
+                </div>
+            </div>
+            <p>Date: {{trainDetails.date}}</p>
+            <p>Class: {{trainDetails.className}}</p>
+            <p>Available Seats: {{trainDetails.availableSeats}}</p>
+            <p>Fare: {{trainDetails.fare}}</p>
+        </div>
+        <form [formGroup]="bookingForm" >
+            <div formArrayName="passengers" *ngFor="let passenger of passengers.controls; let i = index">
+                <div [formGroupName]="i" class="passenger-info-container">
+                    <div>
+                        <h3>Passenger {{i + 1}}</h3>
+                    </div>
+                    <div class="passenger-info">
+                        <mat-form-field>
+                            <mat-label>Name</mat-label>
+                            <input matInput formControlName="name">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Gender</mat-label>
+                            <mat-select formControlName="gender">
+                                <mat-option value="Male">Male</mat-option>
+                                <mat-option value="Female">Female</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Age</mat-label>
+                            <input matInput formControlName="age">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Berth Preference</mat-label>
+                            <mat-select formControlName="berthPreference">
+                                <mat-option value="Lower">Lower</mat-option>
+                                <mat-option value="Middle">Middle</mat-option>
+                                <mat-option value="Upper">Upper</mat-option>
+                                <mat-option value="Side-Lower">Side Lower</mat-option>
+                                <mat-option value="Side-Upper">Side Upper</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <button mat-raised-button color="danger" (click)="removePassenger(i)">
+                    <mat-icon color="danger">remove</mat-icon>
+                </button>
+            </div>
+            <button mat-button (click)="addPassenger()">Add More Passenger</button>
+            
+
+            <div formGroupName="contact">
+                <h3>Contact Details</h3>
+                <mat-form-field>
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput formControlName="phoneNumber">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+            </div>
+
+            <div>
+                <h5>GST Charges: 18%</h5>
+                <h5>Extra Charges: 23</h5>
+                <h3>Total Price: {{calculateTotalPrice() | currency:'INR':'code'}}</h3>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Pay</button>
+            </div>
+        </form>
+    </div>
+</div>

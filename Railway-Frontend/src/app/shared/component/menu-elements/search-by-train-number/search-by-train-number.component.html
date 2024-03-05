@@ -1,0 +1,64 @@
+<header>
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Search By Train Number</p>
+</header>
+<div class="form-container">
+    <form [formGroup]="searchByTrainNumberForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Train Number</mat-label>
+            <input matInput type="text" id="trainNumber" formControlName="trainNumber" name="trainNumber">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit"
+            (click)="getTrain()"><mat-icon>search</mat-icon></button>
+    </form>
+</div>
+<div class="main-content-container">
+    <div *ngIf="trainVisible">
+        <mat-card>
+            <mat-card-content>
+                <ul>
+                    <li class="card-heading">{{trains[0].trainNumber}} - {{trains[0].trainName}}</li>
+                    <li class="card-subHeading">
+                        <p>From: {{trains[0].stationFrom}}</p> <mat-icon>trending_flat</mat-icon>
+                        <p>To: {{trains[0].stationTo}}</p>
+                    </li>
+                    <div class="availability-container">
+                        <li>Availability on</li>
+                        <div class="availability-items-container">
+                            <div class="availability-items">
+                                <li>Mon</li>
+                                <li>{{trains[0].trainRunsOnMon}}</li>
+                            </div>
+                            <div class="availability-items">
+                                <li>Tue</li>
+                                <li> {{trains[0].trainRunsOnTue}}</li>
+                            </div>
+                            <div class="availability-items">
+                                <li>Wed</li>
+                                <li>{{trains[0].trainRunsOnWed}}</li>
+                            </div>
+                            <div class="availability-items">
+                                <li>Thu</li>
+                                <li> {{trains[0].trainRunsOnThu}}</li>
+                            </div>
+                            <div class="availability-items">
+                                <li>Fri</li>
+                                <li> {{trains[0].trainRunsOnFri}}</li>
+                            </div>
+                            <div class="availability-items">
+                                <li>Sat</li>
+                                <li> {{trains[0].trainRunsOnSat}}</li>
+                            </div>
+                            <div class="availability-items">
+                                <li>Sun</li>
+                                <li> {{trains[0].trainRunsOnSun}}</li>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<app-footer></app-footer>

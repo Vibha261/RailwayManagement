@@ -1,0 +1,153 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: navy;
+
+    img {
+        width: auto;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 600;
+
+        a {
+            text-decoration: none;
+            font-weight: 200;
+        }
+    }
+}
+
+.main-content-container {
+    background-image: url("../../../../../assets/stationbackground.png");
+    background-size: cover;
+    min-height: 80vh;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: navy;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 600px;
+    gap: 10px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+mat-form-field {
+    width: 100%;
+    height: 56px;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+    width: 20%;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+mat-card {
+    max-width: 900px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: navy;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    width: 900px;
+    padding: 5px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+mat-card-content {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 8px 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.card-heading {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card-subHeading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-size: 25px;
+    align-items: center;
+}
+
+.card-subHeading p {
+    margin: 0;
+    color: #666;
+}
+
+// Additional styling for the button
+button {
+    background-color: navy;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+.bg-white {
+    background: aliceblue;
+}

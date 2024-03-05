@@ -1,0 +1,56 @@
+<header>
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Train Schedule</p>
+</header>
+<div class="form-container">
+    <form [formGroup]="trainRouteForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Train Number or Name</mat-label>
+            <input matInput type="text" id="trainNumberOrName" formControlName="trainNumberOrName"
+                name="trainNumberOrName">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit"
+            (click)="getTrainRoute()"><mat-icon>search</mat-icon></button>
+    </form>
+</div>
+<div class="main-content-container">
+    <div *ngIf="trainRouteVisible">
+        <mat-card>
+            <mat-card-content>
+                <ul>
+                    <li class="card-heading">{{trains[0].trainNumber}} - {{trains[0].trainName}}</li>
+                    <li class="card-subHeading">
+                        <p>From: {{trains[0].stationFrom}}</p> <mat-icon>trending_flat</mat-icon>
+                        <p>To: {{trains[0].stationTo}}</p>
+                    </li>
+                </ul>
+                <table class="station-table">
+                    <tr>
+                        <th>Serial Number</th>
+                        <th>Station Name</th>
+                        <th>Station Code</th>
+                        <th>Distance</th>
+                        <th>Arrival Time</th>
+                        <th>Departure Time</th>
+                        <th>Halt Time</th>
+                        <th>Route Number</th>
+                        <th>Day Count</th>
+                    </tr>
+                    <tr *ngFor="let station of routeList">
+                        <td>{{ station.stnSerialNumber }}</td>
+                        <td>{{ station.stationName }}</td>
+                        <td>{{ station.stationCode }}</td>
+                        <td>{{ station.distance }}</td>
+                        <td>{{ station.arrivalTime }}</td>
+                        <td>{{ station.departureTime }}</td>
+                        <td>{{ station.haltTime }}</td>
+                        <td>{{ station.routeNumber }}</td>
+                        <td>{{ station.dayCount }}</td>
+                    </tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,89 @@
+<header>
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Seats Availabilty</p>
+</header>
+<div class="form-container">
+    <form [formGroup]="searchByTrainNumberForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Train Number</mat-label>
+            <input matInput type="text" id="trainNumber" formControlName="trainNumber" name="trainNumber">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" name="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit"
+            (click)="getTrain()"><mat-icon>search</mat-icon></button>
+    </form>
+</div>
+<div class="main-content-container">
+    <div *ngIf="trainVisible" class="train-details">
+        <div class="train-info">
+            <ul>
+                <div class="flex flex-row">
+                    <li>{{seats.trainNumber}}</li>
+                    <li>{{seats.trainName}}</li>
+                </div>
+                <div class="flex flex-row">
+                    <li>{{seats.stationFrom}}</li>
+                    <li><mat-icon>trending_flat</mat-icon></li>
+                    <li>{{seats.stationTo}}</li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="seat-details">
+            <ul *ngFor="let seats of seatsInClass">
+                <mat-card class="seat-card" (click)="onSeatClick(seats.className)">
+                    <ng-container *ngIf="seats.className == 'sleeper'; else ac2tier">
+                        <li>
+                            <h4>Sleeper</h4>
+                        </li>
+                    </ng-container>
+                    <ng-template #ac2tier>
+                        <ng-container *ngIf="seats.className == 'ac2tier'; else ac3tier">
+                            <li>
+                                <h4>2 AC</h4>
+                            </li>
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #ac3tier>
+                        <ng-container *ngIf="seats.className == 'ac3tier'; else acFirstClass">
+                            <li>
+                                <h4>3 AC</h4>
+                            </li>
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #acFirstClass>
+                        <ng-container *ngIf="seats.className == 'acFirstClass'; else acChairCar">
+                            <li>
+                                <h4>1 AC</h4>
+                            </li>
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #acChairCar>
+                        <ng-container *ngIf="seats.className == 'acChairCar'; else defaultClass">
+                            <li>
+                                <h4>AC Chair Car</h4>
+                            </li>
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #defaultClass>
+                        <li>
+                            <h4>{{seats.className}}</h4>
+                        </li>
+                    </ng-template>
+                    <li>Available Seats</li>
+                    <li>{{seats.availableSeats}}</li>
+                    <div *ngIf="fareVisible && seats.className===seatType">
+                        Fare:{{seats.fare}}
+                    </div>
+                </mat-card>
+            </ul>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

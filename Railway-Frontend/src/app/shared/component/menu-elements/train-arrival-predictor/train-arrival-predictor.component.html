@@ -1,0 +1,42 @@
+<header>
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Predicted Arrival Time</p>
+</header>
+<div class="form-container">
+    <form [formGroup]="timePredictionForm">
+        <mat-form-field appearance="outline">
+            <mat-label class="bg-white">Train Number</mat-label>
+            <input matInput type="text" id="trainNumber" formControlName="trainNumber" name="trainNumber">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Station Code</mat-label>
+            <input matInput type="text" id="stationCode" formControlName="stationCode" name="stationCode">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit"
+            (click)="getArrivalTime()"><mat-icon>search</mat-icon></button>
+    </form>
+</div>
+<div class="main-content-container">
+    <div *ngIf="trainVisible" class="train-details">
+        <mat-card>
+            <mat-card-content>
+                <ul>
+                    <div class="button-container">
+                        <button (click)="navigate(trainPredictedDetail.trainNumber)">Train Schedule</button>
+                        <li class="card-heading">{{trainPredictedDetail.trainNumber}} -
+                            {{trainPredictedDetail.trainName}}</li>
+                    </div>
+                    <li class="card-subHeading">
+                        <p>Original Arrival Time: {{trainPredictedDetail.arrivalTime.split('->')[0].trim()}}</p>
+                        <p>Expected Arrival Time: {{trainPredictedDetail.arrivalTime.split('->')[1].split('
+                            (Delay:')[0].trim()}}</p>
+                        <p>Delayed by {{trainPredictedDetail.arrivalTime.split('(Delay:')[1].split(')')[0].trim()}}</p>
+                        <p>Halt Time: {{trainPredictedDetail.haltTime}} minutes</p>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<app-footer></app-footer>

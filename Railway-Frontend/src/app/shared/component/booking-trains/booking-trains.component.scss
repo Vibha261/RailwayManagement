@@ -1,0 +1,137 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  color: navy;
+
+  img {
+    width: auto;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 900;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+
+    a {
+      text-decoration: none;
+      font-weight: 200;
+    }
+  }
+}
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  background-color: navy;
+  color: aliceblue;
+  padding: 20px;
+  font-size: 30px;
+  margin: 0px;
+  text-align: center;
+
+}
+
+.main-content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.main-content-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.train-data-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.train-card {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.station-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+mat-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.station-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+button {
+  margin-left: 10px;
+
+}
+
+.seat-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.seat-class-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.seat-class-card div {
+  text-align: left;
+}
+
+.seat-class-card button {
+  justify-self: end;
+}
+
+// .train-data-container{
+//   display: flex;
+//   flex-direction: column;
+// }

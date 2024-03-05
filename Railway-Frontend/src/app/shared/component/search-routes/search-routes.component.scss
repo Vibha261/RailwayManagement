@@ -1,0 +1,36 @@
+.form-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   font-family: 'Times New Roman', Times, serif;
+   // background: rgb(255, 255, 255);
+   // margin: 50px 30px;
+   // padding: 20px;
+   // box-sizing: border-box;
+   // border-radius: 20px;
+}
+
+h1 {
+   color: navy;
+}
+
+.mat-form-field {
+   border: 4px solid lightgray;
+
+   &:focus-within {
+      border-color: navy;
+   }
+}
+
+button[mat-raised-button] {
+   margin-top: 10px;
+   background-color: navy;
+   color: white;
+}
+
+.form-item {
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+}

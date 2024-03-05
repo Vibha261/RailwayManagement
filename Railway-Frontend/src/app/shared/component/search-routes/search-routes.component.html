@@ -1,0 +1,51 @@
+<form [formGroup]="searchForm" (submit)="onSubmit()" class="form-container">
+    <h1> Book Tickets</h1>
+    <div class="form-item">
+        <mat-form-field appearance="fill">
+            <mat-label>From</mat-label>
+            <input matInput type="text" formControlName="from">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>To</mat-label>
+            <input matInput type="text" formControlName="to">
+        </mat-form-field>
+    </div>
+    <div class="form-item">
+        <mat-form-field appearance="fill">
+            <mat-label>Class</mat-label>
+            <mat-select formControlName="allClasses">
+                <mat-option value="allClasses">All Classes</mat-option>
+                <mat-option value="anubhutiClass">Anubhuti Class (EA)</mat-option>
+                <mat-option value="acFirstClass">AC First Class (1A)</mat-option>
+                <mat-option value="vistadomeAc">Vistadome AC (EV)</mat-option>
+                <mat-option value="execChairCar">Executive Chair Car (EC)</mat-option>
+                <mat-option value="ac2tier">AC 2 Tier (2A)</mat-option>
+                <mat-option value="firstClass">First Class (FC)</mat-option>
+                <mat-option value="ac3tier">AC 3 Tier (3A)</mat-option>
+                <mat-option value="ac3Economy">AC 3 Economy (3E)</mat-option>
+                <mat-option value="sleeper">Sleeper</mat-option>
+                <mat-option value="acChairCar">AC Chair Car</mat-option>
+                <mat-option value="secondSitting">Second Sitting (2S)</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Quota</mat-label>
+            <mat-select formControlName="quota">
+                <mat-option value="general">General</mat-option>
+                <mat-option value="ladies">Ladies</mat-option>
+                <mat-option value="seniorCitizen">Senior Citizen</mat-option>
+                <mat-option value="personWithDisability">Person With Disability</mat-option>
+                <mat-option value="dutyPass">Duty Pass</mat-option>
+                <mat-option value="tatkal">Tatkal</mat-option>
+                <mat-option value="premiumTatkal">Premium Tatkal</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <mat-form-field appearance="fill">
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Search</button>
+</form>

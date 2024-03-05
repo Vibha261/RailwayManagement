@@ -1,0 +1,23 @@
+<header>
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Cancelled Train</p>
+</header>
+<h2> Today's Cancelled Trains</h2>
+<div class="main-content-container">
+    <div class="cancelled-trains-container">
+        <div class="cancelled-trains-list">
+            <mat-card *ngFor="let train of cancelledtrains">
+                <mat-card-header>
+                    <mat-card-title>{{train.trainNumber}} - {{train.trainName}}</mat-card-title>
+                    <mat-card-subtitle>Cancelled on {{train.date}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{train.from}}</p><mat-icon>trending_flat</mat-icon>
+                    <p>{{train.to}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

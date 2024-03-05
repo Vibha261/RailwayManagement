@@ -1,0 +1,8 @@
+<div *ngIf="recentSearches; else nosearches">
+    <div *ngFor="let searches of recentSearches">
+        <p>{{searches}}</p>
+    </div>
+</div>
+<ng-template #nosearches>
+    <p>No Recent Searches.</p>
+</ng-template>

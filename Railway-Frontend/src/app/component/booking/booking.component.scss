@@ -1,0 +1,110 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: navy;
+
+    img {
+        width: auto;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 600;
+
+        a {
+            text-decoration: none;
+            font-weight: 200;
+        }
+    }
+}
+
+.booking-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    mat-form-field {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    mat-select {
+        width: 100%;
+    }
+
+    mat-button {
+        margin-top: 10px;
+    }
+
+    mat-raised-button {
+        margin-top: 20px;
+    }
+
+    .total-price {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .passenger-info {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .passenger-info-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap {
+    gap: 20px;
+    font-size: 25px;
+}
+
+.train-details-container {
+    background-color: navy;
+    color: aliceblue;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}

@@ -1,0 +1,56 @@
+<header>
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Ticket Booking</p>
+</header>
+<h2> Ticket Booking</h2>
+<div class="main-content-container">
+    <!-- <div>
+        <app-search-routes></app-search-routes>
+    </div> -->
+    <div class="train-data-container">
+        <mat-card *ngFor="let booking of trainDetails" class="train-card">
+            <mat-card-title>
+                {{booking.trainNumber}} - {{booking.trainName}}
+            </mat-card-title>
+            <mat-card-content>
+                <div class="station-details-container">
+                    <div class="station-details">
+                        <div>
+                            <strong>From:</strong> {{booking.fromStation}}
+                        </div>
+                        <div>
+                            <strong>Arrival Time:</strong> {{booking.fromStationArrivalTime}}
+                        </div>
+                        <div>
+                            <strong>Departure Time:</strong> {{booking.fromStationDepartureTime}}
+                        </div>
+                    </div>
+                    <div class="station-details">
+                        <div>
+                            <strong>To:</strong> {{booking.toStation}}
+                        </div>
+                        <div>
+                            <strong>Arrival Time:</strong> {{booking.toStationArrivalTime}}
+                        </div>
+                        <div>
+                            <strong>Departure Time:</strong> {{booking.toStationDepartureTime}}
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="booking?.isSeatDetailsVisible" class="seat-details">
+                    <div *ngFor="let seatClass of seatsInClass" class="seat-class-card">
+                        <div>{{seatClass.className}}</div>
+                        <div>Available Seats: {{seatClass.availableSeats}}</div>
+                        <div>Fare: {{seatClass.fare}}</div>
+                        <button mat-button (click)="bookTrain(booking.trainNumber, seatClass.className)">Book</button>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions class="action-buttons">
+                <button mat-button (click)="navigate(booking?.trainNumber)" style="color: aliceblue; background-color: navy;">Train Schedule</button>
+                <button mat-button (click)="seatsDetails(booking)" style="color: aliceblue; background-color: navy;">Check Seats</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

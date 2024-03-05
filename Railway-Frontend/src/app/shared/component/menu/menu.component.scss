@@ -1,0 +1,38 @@
+.menu-item-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.menu-item-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    padding: 40px;
+    overflow: visible; // Ensure overflow is not hidden
+}
+
+mat-list-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+mat-list-item:hover {
+    background-color: #444;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

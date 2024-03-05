@@ -1,0 +1,17 @@
+<header class="d-flex flex-row justify-content-between">
+    <img src="../../../../../assets/TrainLogo.png" alt="logo">
+    <h1>Indian Railways</h1>
+    <p><a routerLink="/">Home</a> > Help Desk</p>
+</header>
+<div class="main-content-container">
+    <mat-accordion>
+        <h2>May I Help You?</h2>
+        <mat-expansion-panel *ngFor="let item of questions">
+            <mat-expansion-panel-header>
+                {{item.question}}
+            </mat-expansion-panel-header>
+            <p>{{item.answer}}</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+<app-footer></app-footer>
