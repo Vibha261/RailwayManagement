@@ -33,6 +33,8 @@ import { EditProfileComponent } from './component/edit-profile/edit-profile.comp
 import { BookingTrainsComponent } from './shared/component/booking-trains/booking-trains.component';
 import { BookingComponent } from './component/booking/booking.component';
 import { AuthGuard } from './auth.guard';
+import { ToastrModule } from 'ngx-toastr';
+import { CancelDialogBoxComponent } from './component/cancel-dialog-box/cancel-dialog-box.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -62,7 +64,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     RecentSearchesComponent,
     EditProfileComponent,
     BookingTrainsComponent,
-    BookingComponent
+    BookingComponent,
+    CancelDialogBoxComponent
 
   ],
   imports: [
@@ -80,6 +83,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     BrowserAnimationsModule,
     AngularMaterialModule,
+    ToastrModule.forRoot()
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

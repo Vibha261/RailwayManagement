@@ -28,31 +28,38 @@
                         <div class="availability-items-container">
                             <div class="availability-items">
                                 <li>Mon</li>
-                                <li>{{trains[0].trainRunsOnMon}}</li>
+                                <li *ngIf="trains[0].trainRunsOnMon === 'Y'"><mat-icon style="color: rgb(10, 218, 10);">done</mat-icon></li>
+                                <li *ngIf="trains[0].trainRunsOnMon === 'N'"><mat-icon style="color: rgb(237, 9, 9);">close</mat-icon></li>
                             </div>
                             <div class="availability-items">
                                 <li>Tue</li>
-                                <li> {{trains[0].trainRunsOnTue}}</li>
+                                <li *ngIf="trains[0].trainRunsOnTue === 'Y'"><mat-icon style="color: rgb(10, 218, 10);">done</mat-icon></li>
+                                <li *ngIf="trains[0].trainRunsOnTue === 'N'"><mat-icon style="color: rgb(237, 9, 9);">close</mat-icon></li>
                             </div>
                             <div class="availability-items">
                                 <li>Wed</li>
-                                <li>{{trains[0].trainRunsOnWed}}</li>
+                                <li *ngIf="trains[0].trainRunsOnWed === 'Y'"><mat-icon style="color: rgb(10, 218, 10);">done</mat-icon></li>
+                                <li *ngIf="trains[0].trainRunsOnWed === 'N'"><mat-icon style="color: rgb(237, 9, 9);">close</mat-icon></li>
                             </div>
                             <div class="availability-items">
                                 <li>Thu</li>
-                                <li> {{trains[0].trainRunsOnThu}}</li>
+                                <li *ngIf="trains[0].trainRunsOnThu === 'Y'"><mat-icon style="color: rgb(10, 218, 10);">done</mat-icon></li>
+                                <li *ngIf="trains[0].trainRunsOnThu === 'N'"><mat-icon style="color: rgb(237, 9, 9);">close</mat-icon></li>
                             </div>
                             <div class="availability-items">
                                 <li>Fri</li>
-                                <li> {{trains[0].trainRunsOnFri}}</li>
+                                <li *ngIf="trains[0].trainRunsOnFri === 'Y'"><mat-icon style="color: rgb(10, 218, 10);">done</mat-icon></li>
+                                <li *ngIf="trains[0].trainRunsOnFri === 'N'"><mat-icon style="color: rgb(237, 9, 9);">close</mat-icon></li>
                             </div>
                             <div class="availability-items">
                                 <li>Sat</li>
-                                <li> {{trains[0].trainRunsOnSat}}</li>
+                                <li *ngIf="trains[0].trainRunsOnSat === 'Y'"><mat-icon style="color: rgb(10, 218, 10);">done</mat-icon></li>
+                                <li *ngIf="trains[0].trainRunsOnSat === 'N'"><mat-icon style="color: rgb(237, 9, 9);">close</mat-icon></li>
                             </div>
                             <div class="availability-items">
                                 <li>Sun</li>
-                                <li> {{trains[0].trainRunsOnSun}}</li>
+                                <li *ngIf="trains[0].trainRunsOnSun === 'Y'"><mat-icon style="color: rgb(10, 218, 10);">done</mat-icon></li>
+                                <li *ngIf="trains[0].trainRunsOnSun === 'N'"><mat-icon style="color: rgb(237, 9, 9);">close</mat-icon></li>
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ import { Register } from 'src/app/shared/models/registerUserSchema';
 import { UserService } from 'src/app/services/userService/user.service';
 import { UserAuthenticateService } from 'src/app/services/userService/user-authenticate.service';
 import { TrainService } from 'src/app/services/trainService/train.service';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-dasboard',
@@ -13,33 +14,44 @@ import { TrainService } from 'src/app/services/trainService/train.service';
   styleUrls: ['./dasboard.component.scss']
 })
 export class DasboardComponent implements OnInit {
-  dropdownVisible: boolean = false;
-  currentUser: Register; 
-  emptyRecentSearches: string[];
 
-  constructor(private router: Router, private dialog: MatDialog, private userService: UserService, private auth:UserAuthenticateService, private trainservice:TrainService) { }
+  //variable to toggle the display of menu
+  dropdownVisible: boolean = false;
+
+  //variable to store the current user details.
+  currentUser: Register;
+
+  constructor(public toast: ToastrService, private router: Router, private dialog: MatDialog, private userService: UserService, private auth: UserAuthenticateService, private trainservice: TrainService) { }
 
   ngOnInit(): void {
-    this.currentUser = this.userService.getCurrentUser(); 
+    this.currentUser = this.userService.getCurrentUser();
     if (!this.userService.getCurrentUser()) {
       this.router.navigate(['/login']);
     }
   }
 
+  //function to toggle the dropDown
   toggleDropdown() {
     this.dropdownVisible = !this.dropdownVisible;
   }
 
+  //on logout the local storage gets empty.
   onLogout(): void {
     localStorage.removeItem('currentUser');
-    localStorage.setItem('recentSearchHistory', JSON.stringify(this.emptyRecentSearches));
     this.router.navigate(['/']);
     this.auth.logout();
     console.log(this.auth.isUserLoggedIn());
     this.trainservice.setRecentHistory();
+    this.toast.success("Logged Out Successfully")
   }
 
+  //function to open the edit profile Dialog box.
   showEditProfileDialog(): void {
-    this.dialog.open(EditProfileComponent);
+    const dialogRef = this.dialog.open(EditProfileComponent);
+    dialogRef.afterClosed().subscribe((result: boolean) => {
+      if (result) {
+        this.ngOnInit();
+      }
+    });
   }
 }

@@ -4,6 +4,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
 import { UserService } from 'src/app/services/userService/user.service';
 import { Register } from '../../models/registerUserSchema';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class RegisterComponent implements OnInit {
   //variable to create a form
   registerForm: FormGroup;
 
-  constructor(public dialogRef: MatDialogRef<RegisterComponent>, public dialog: MatDialog, public userService: UserService) { }
+  constructor(public toast: ToastrService, public dialogRef: MatDialogRef<RegisterComponent>, public dialog: MatDialog, public userService: UserService) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -51,13 +52,13 @@ export class RegisterComponent implements OnInit {
         next: (response) => {
            console.log(userData);
            console.log(response);
-           alert(this.registerForm.get('name').value + " registered Successfully.");
+           this.toast.success(`${this.registerForm.get('name').value} registered Successfully.`);
            this.dialogRef.close();
            this.dialog.open(LoginComponent);
         },
         error: (err) => {
            console.error('Error registering user:', err);
-           alert('User Name Already Exists. Try with another UserName');
+           this.toast.error('User Name Already Exists. Try with another UserName');
            this.dialogRef.close();
         }
        });

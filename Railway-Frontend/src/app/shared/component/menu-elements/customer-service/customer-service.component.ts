@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/services/userService/user.service';
 import { CustomerSchema } from 'src/app/shared/models/customerSchema';
 
@@ -13,7 +14,7 @@ export class CustomerServiceComponent {
   //variable to create a form
   customerServiceForm: FormGroup;;
 
-  constructor(private customerService: UserService) { }
+  constructor(private toast:ToastrService,private customerService: UserService) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -45,12 +46,13 @@ export class CustomerServiceComponent {
       this.customerService.submitQuery(userData).subscribe({
         next: (response) => {
           console.log('Query submitted successfully', response);
-          alert("Submitted Succesfully");
+          this.toast.info("Query Submitted Succesfully.");
+          window.location.reload();
 
         },
         error: (err) => {
           console.error('Error submitting query', err);
-          alert("Submission Fail");
+          this.toast.error("Submission Fail");
 
         }
       });

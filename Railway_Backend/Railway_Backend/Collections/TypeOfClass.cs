@@ -14,6 +14,6 @@ namespace Railway_Backend.Collections
 
         [BsonElement("bookedSeats")]
         [BsonRepresentation(BsonType.Document)]
-        public Dictionary<string, int> BookedSeat {  get; set; }
+        public Dictionary<string, int> BookedSeats {  get; set; }
     }
 }

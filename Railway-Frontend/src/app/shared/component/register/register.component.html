@@ -1,4 +1,4 @@
-<form [formGroup]="registerForm" (submit)="onSignUp()">
+<form [formGroup]="registerForm">
     <h1>Register New User</h1>
     <mat-form-field appearance="outline">
         <mat-label>Name</mat-label>
@@ -20,6 +20,6 @@
         <mat-label>Password</mat-label>
         <input matInput type="password" formControlName="password">
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Register</button>
+    <button mat-raised-button color="primary" type="submit" (click)="onSignUp()">Register</button>
     <button mat-raised-button color="accent" (click)="onOldUser()">Old User</button>
 </form>

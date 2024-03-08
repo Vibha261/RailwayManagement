@@ -16,6 +16,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [],
@@ -38,7 +39,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatPaginatorModule,
     MatExpansionModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressBarModule
 
   ]
 })

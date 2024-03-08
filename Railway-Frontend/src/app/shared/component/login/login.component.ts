@@ -6,6 +6,7 @@ import { UserService } from 'src/app/services/userService/user.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { Register } from '../../models/registerUserSchema';
 import { UserAuthenticateService } from 'src/app/services/userService/user-authenticate.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   //variable to create a form
   loginForm: FormGroup;
 
-  constructor(public dialogRef: MatDialogRef<LoginComponent>, public dialog: MatDialog, public userService: UserService, public router: Router, public auth: UserAuthenticateService) {
+  constructor(public toast:ToastrService, public dialogRef: MatDialogRef<LoginComponent>, public dialog: MatDialog, public userService: UserService, public router: Router, public auth: UserAuthenticateService) {
     //removing current user from storage when the user navigate the HomePage
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -57,6 +58,7 @@ export class LoginComponent implements OnInit {
           if (currentUser) {
             this.router.navigate(['/dashboard']);
             this.auth.login();
+            this.toast.success(`Welcome! ${currentUser.name}`);
             console.log("after calling login()");
             console.log(this.auth.isUserLoggedIn());
             console.log("logged in!");
@@ -65,11 +67,14 @@ export class LoginComponent implements OnInit {
         },
         error: (err) => {
           console.log('error', err);
-          alert("Invalid UserName or Password");
+          this.toast.error("Invalid UserName or password.");
         }
       });
     }
   }
 
-
+  newUser():void{
+    this.dialog.open(RegisterComponent);
+    this.dialogRef.close();
+  }
 }

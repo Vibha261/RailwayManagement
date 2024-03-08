@@ -1,6 +1,6 @@
 <div *ngIf="recentSearches; else nosearches">
-    <div *ngFor="let searches of recentSearches">
-        <p>{{searches}}</p>
+    <div *ngFor="let search of recentSearches">
+        <p>{{search}}</p>
     </div>
 </div>
 <ng-template #nosearches>

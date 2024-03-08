@@ -37,7 +37,6 @@ namespace Railway_Backend.Controllers
                 }
                 else
                 {
-                    // Handle any other potential results or errors
                     return BadRequest("An unexpected error occurred during registration.");
                 }
                 
@@ -62,12 +61,12 @@ namespace Railway_Backend.Controllers
 
                 // Generate JWT token
                 var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.ASCII.GetBytes("eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcwOTM2MzExNCwiaWF0IjoxNzA5MzYzMTE0fQ.KU0RlsSJA_u_ojOK46Y4HuCFbveJD3CFhBsYujlukrE"); // Replace with your secret key
+                var key = Encoding.ASCII.GetBytes("eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcwOTM2MzExNCwiaWF0IjoxNzA5MzYzMTE0fQ.KU0RlsSJA_u_ojOK46Y4HuCFbveJD3CFhBsYujlukrE");
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-                new Claim(ClaimTypes.Name, user.UserName)
+                        new Claim(ClaimTypes.Name, user.UserName)
                     }),
                     Expires = DateTime.UtcNow.AddDays(7),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -100,11 +99,10 @@ namespace Railway_Backend.Controllers
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
                     ValidateAudience = false,
-                    ClockSkew = TimeSpan.Zero // Remove delay between the server and client clocks
+                    ClockSkew = TimeSpan.Zero
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
-                // You can also validate the token's claims here if needed
 
                 return true;
             }

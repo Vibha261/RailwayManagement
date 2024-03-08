@@ -6,6 +6,7 @@ import { Train } from 'src/app/shared/models/trainSchema';
 import { differenceInMinutes, parse } from 'date-fns';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userService/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-train-arrival-predictor',
@@ -29,7 +30,7 @@ export class TrainArrivalPredictorComponent {
   //variable to store the stations data.
   stationData: TrainOnStation[];
 
-  constructor(private trainservice: TrainService, private router: Router, private userService: UserService) 
+  constructor(private trainservice: TrainService, private router: Router, private userService: UserService, private toast: ToastrService) 
   {
   }
 
@@ -63,7 +64,7 @@ export class TrainArrivalPredictorComponent {
           this.trainservice.recentHistoryTwoParam(trainNumber,stationCode);
 
           if (resp === null) {
-            alert('Invalid train number or Station code.');
+            this.toast.error('Invalid train number or Station code.');
             this.trainVisible=false;
           } else {
             this.trainPredictedDetail = resp;
@@ -108,7 +109,7 @@ export class TrainArrivalPredictorComponent {
     const time1Date = parse(time1, formatString, new Date());
     const time2Date = parse(time2, formatString, new Date());
     const diff = differenceInMinutes(time2Date, time1Date);
-    return diff > 0 ? `+${diff} minutes` : `${diff} minutes`;
+    return diff > 0 ? `${diff} minutes` : `${diff} minutes`;
   }
 
   //function to navigate to train schedule component on click of train schedule

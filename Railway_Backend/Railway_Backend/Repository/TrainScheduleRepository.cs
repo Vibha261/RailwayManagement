@@ -67,13 +67,13 @@ namespace Railway_Backend.Repository
             var trainSchedule = await _mongoTrainScheduleCollection.Find(ts => ts.TrainNumber == trainNumber).FirstOrDefaultAsync();
             if (trainSchedule == null)
             {
-                return null; // Or handle this case as needed
+                return null; 
             }
 
             var station = trainSchedule.StationListString?.FirstOrDefault(s => s.StationCode == stationCode);
             if (station == null)
             {
-                return null; // Or handle this case as needed
+                return null; 
             }
 
             var trainOnStation = new TrainOnStation
@@ -107,7 +107,6 @@ namespace Railway_Backend.Repository
                 return null;
             }
 
-            // Fetch seat availability data
             var seatAvailability = await GetSeatAvailabilityByTrainNumber(trainNumber);
             if (seatAvailability == null)
             {
@@ -116,13 +115,12 @@ namespace Railway_Backend.Repository
             // Filter seat availability based on the date
             foreach (var seatClass in seatAvailability.Classes)
             {
-                if (seatClass.BookedSeat.ContainsKey(date))
+                if (seatClass.BookedSeats.ContainsKey(date))
                 {
-                    seatClass.AvailableSeats -= seatClass.BookedSeat[date];
+                    seatClass.AvailableSeats -= seatClass.BookedSeats[date];
                 }
             }
 
-            // Combine the data
             var trainSeatModel = new SeatsData
             {
                 TrainNumber = trainSchedule.TrainNumber,
@@ -142,32 +140,30 @@ namespace Railway_Backend.Repository
 
         public async Task UpdateSeatAvailability(string trainNumber, string date, string className, int numberOfSeats)
         {
-            // Define the filter to match the document with the specified trainNumber and className within the Classes array
+
             var filter = Builders<AvailableSeats>.Filter.And(
                 Builders<AvailableSeats>.Filter.Eq(sa => sa.TrainNumber, trainNumber),
                 Builders<AvailableSeats>.Filter.ElemMatch(sa => sa.Classes, c => c.ClassName == className)
             );
 
-            // Define the update to set the numberOfSeats for the specified date in the BookedSeat dictionary
+
             var update = Builders<AvailableSeats>.Update.Set(
-                sa => sa.Classes[-1].BookedSeat[date], numberOfSeats
+                sa => sa.Classes[-1].BookedSeats[date], numberOfSeats
             );
 
-            // Use the ArrayFilters option to specify which element in the Classes array to update
-            var options = new UpdateOptions
-            {
-                ArrayFilters = new List<ArrayFilterDefinition>
-        {
-            new BsonDocumentArrayFilterDefinition<BsonDocument>(new BsonDocument("c.className", className))
-        }
-            };
 
-            // Execute the update operation
+           var options = new UpdateOptions
+           {
+               ArrayFilters = new List<ArrayFilterDefinition>
+               {
+                    new BsonDocumentArrayFilterDefinition<BsonDocument>(new BsonDocument("c.className", className))
+               }
+           };
+
             var result = await _mongoSeatAvailabilityCollection.UpdateOneAsync(filter, update, options);
 
             if (result.ModifiedCount == 0)
             {
-                // Handle the case where no document was updated, e.g., log an error or throw an exception
                 Console.WriteLine("No document was updated. Check the trainNumber, className, and date.");
             }
         }
@@ -209,7 +205,7 @@ namespace Railway_Backend.Repository
 
                     if (fromStationFound && toStationFound)
                     {
-                        break; // Both stations found, no need to continue checking
+                        break;
                     }
                 }
 

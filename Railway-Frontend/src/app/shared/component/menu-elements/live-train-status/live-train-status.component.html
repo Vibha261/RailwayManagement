@@ -4,20 +4,115 @@
     <p><a routerLink="/">Home</a> > Live Status</p>
 </header>
 <div class="form-container">
-    <form [formGroup]="searchByTrainNumberForm" (submit)="getTrainDetailList()">
+    <form [formGroup]="trainRouteForm">
         <mat-form-field appearance="outline">
             <mat-label>Train Number</mat-label>
             <input matInput type="text" id="trainNumber" formControlName="trainNumber" name="trainNumber">
         </mat-form-field>
-        <button mat-raised-button color="primary" type="submit"><mat-icon>search</mat-icon></button>
+        <button mat-raised-button color="primary" (click)="getTrainDetail()"><mat-icon>search</mat-icon></button>
     </form>
 </div>
 <div class="main-content-container">
-    <mat-card>
-        <mat-card-content>
-            <h1>SERVICE IS NOT LIVE</h1>
-            <img src="../../../../../assets/notAvailable.png">
-        </mat-card-content>
-    </mat-card>
+    <div *ngIf="trainStatus && (stationStatus.previousStation || stationStatus.currentStation || stationStatus.nextStation)"
+        class="flex flex-column gap">
+        <mat-card>
+            <mat-card-header class="heading-container">
+                <div class="train-headings">
+                    <h1>{{trains[0].trainNumber}}</h1>
+                    <h2>{{trains[0].trainName}}</h2>
+                </div>
+                <p class="live-status"><b>Train Live Status:</b> {{trainStatus}}</p>
+            </mat-card-header>
+            <mat-card-content>
+                <ng-container
+                    *ngIf="(stationStatus.previousStation && stationStatus.currentStation && stationStatus.nextStation); else inBetween"
+                    class="flex flex-row space-evenly">
+                    <div class="flex flex-row space-evenly">
+                        <div>
+                            <h3>Previous Station:</h3>
+                            <p>{{stationStatus.previousStation.stationName}}
+                                ({{stationStatus.previousStation.stationCode}})
+                            </p>
+                            <p>DepartedTime: {{stationStatus.previousStation.departureTime}}</p>
+                        </div>
+                        <div>
+                            <h3>Current Station:</h3>
+                            <p>{{stationStatus.currentStation.stationName}}
+                                ({{stationStatus.currentStation.stationCode}})
+                            </p>
+                            <p>Departure Time: {{stationStatus.currentStation.departureTime}}</p>
+                        </div>
+                        <div>
+                            <h3>Next Station:</h3>
+                            <p>{{stationStatus.nextStation.stationName}} ({{stationStatus.nextStation.stationCode}})</p>
+                            <p>Arrival Time: {{stationStatus.nextStation.arrivalTime}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-template #inBetween>
+                    <ng-container *ngIf="(!stationStatus.currentStation); else reached"
+                        class="flex flex-row space-evenly">
+                        <div class="flex flex-row space-evenly">
+                            <div>
+                                <h3>Previous Station:</h3>
+                                <p>{{stationStatus.previousStation.stationName}}
+                                    ({{stationStatus.previousStation.stationCode}})</p>
+                                <p>Departed Time: {{stationStatus.previousStation.departureTime}}</p>
+                            </div>
+                            <div>
+                                <h3>Next Station:</h3>
+                                <p>{{stationStatus.nextStation.stationName}} ({{stationStatus.nextStation.stationCode}})
+                                </p>
+                                <p>Arrival Time: {{stationStatus.nextStation.arrivalTime}}</p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-template>
+                <ng-template #reached>
+                    <ng-container *ngIf="(!stationStatus.nextStation); else start" class="flex flex-row space-evenly">
+                        <div class="flex flex-row space-evenly">
+                            <div>
+                                <h3>Previous Station:</h3>
+                                <p>{{stationStatus.previousStation.stationName}}
+                                    ({{stationStatus.previousStation.stationCode}})</p>
+                                <p>Departed Time: {{stationStatus.previousStation.departureTime}}</p>
+                            </div>
+                            <div>
+                                <h3>Current Station:</h3>
+                                <p>{{stationStatus.currentStation.stationName}}
+                                    ({{stationStatus.currentStation.stationCode}})</p>
+                                <p>Departure Time: {{stationStatus.currentStation.departureTime}}</p>
+
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-template>
+                <ng-template #start>
+                    <ng-container *ngIf="(!stationStatus.previousStation)" class="flex flex-row space-evenly">
+                        <div class="flex flex-row space-evenly">
+                            <div>
+                                <h3>Current Station:</h3>
+                                <p>{{stationStatus.currentStation.stationName}}
+                                    ({{stationStatus.currentStation.stationCode}})</p>
+                                <p>Departure Time: {{stationStatus.currentStation.departureTime}}</p>
+                            </div>
+                            <div>
+                                <h3>Next Station:</h3>
+                                <p>{{stationStatus.nextStation.stationName}} ({{stationStatus.nextStation.stationCode}})
+                                </p>
+                                <p>Arrival Time: {{stationStatus.nextStation.arrivalTime}}</p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-template>
+                <div class="train-progress">
+                    <p>Starting Station</p>
+                    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+                    <p>Ending Station</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
 </div>
 <app-footer></app-footer>

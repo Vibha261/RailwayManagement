@@ -28,11 +28,5 @@ export class TicketBookingService {
   cancelBooking(bookingId: string): Observable<any> {
     return this.http.put(`${this.apiURL}/cancel/${bookingId}`, {});
    }
-
-  //API Call to update the Seats Data
-  // updateSeatsBooking(updatedSeatData: {trainNumber: string,className: string, date:string, passengerCount:number }): Observable<any> {
-  //   return this.http.post<any>(`${this.apiURL}/booking`,updatedSeatData);
-  //  }
-   
    
 }

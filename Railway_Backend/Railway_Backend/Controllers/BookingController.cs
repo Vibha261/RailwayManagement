@@ -16,14 +16,15 @@ namespace Railway_Backend.Controllers
             _ticketBookingRepository = ticketBookingRepository;
         }
 
+        //Reteriving all the booking Details
         [HttpGet]
-
         public async Task<IActionResult> Get()
         {
             var bookingDetails = await _ticketBookingRepository.GetAllAsync();
             return Ok(bookingDetails);
         }
 
+        //Reterieving only the current user booking details
         [HttpGet]
         [Route("/{userName}")]
         public async Task<IActionResult> Get(string userName)
@@ -33,15 +34,13 @@ namespace Railway_Backend.Controllers
 
         }
 
+        //update the booked ticket data in database
         [HttpPost]
-
         public async Task<IActionResult> Post([FromBody]TicketBooking newTicketBooking)
         {
             try
             {
-                // Store the query in MongoDB
                 await _ticketBookingRepository.PostBooking(newTicketBooking);
-                //await _ticketBookingRepository.UpdateSeatAvailability(newTicketBooking.TrainNumber, newTicketBooking.ClassName, newTicketBooking.Date, newTicketBooking.Passengers.Count);
 
 
                 return Json(new { message = "Query Submitted successfully" });
@@ -52,6 +51,7 @@ namespace Railway_Backend.Controllers
             }
         }
 
+        //updating the data for cancellation of bookings
         [HttpPut]
         [Route("/cancel/{bookingId}")]
         public async Task<IActionResult> CancelBooking(string bookingId)
@@ -67,24 +67,6 @@ namespace Railway_Backend.Controllers
                 return BadRequest("Error canceling booking: " + ex.Message);
             }
         }
-
-        //[HttpPut]
-        //public async Task<IActionResult> UpdateSeatAvailability([FromBody] TicketBooking newTicketBooking)
-        //{
-        //    try
-        //    {
-        //        // Update seat availability
-        //        await _ticketBookingRepository.UpdateSeatAvailability(newTicketBooking.TrainNumber, newTicketBooking.ClassName, newTicketBooking.Date, newTicketBooking.Passengers.Count);
-
-        //        return Ok(new { message = "Seat availability updated successfully" });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest("Error updating seat availability: " + ex.Message);
-        //    }
-        //}
-
-
 
     }
 }

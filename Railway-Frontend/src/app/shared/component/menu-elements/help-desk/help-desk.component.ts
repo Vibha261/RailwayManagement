@@ -14,8 +14,8 @@ export class HelpDeskComponent {
       answer: 'To Find the Schedule of any train, Navigate to Home Page: Home > Train Schedules'
     },
     {
-      question: 'When will the Live Status Feature Enable?',
-      answer: 'Very Soon.'
+      question: 'How to check the live status of train?',
+      answer: 'To find the Live Status, Navigate to Home Page: Home > Live Status.'
     },
     {
       question: 'How to Access the features',

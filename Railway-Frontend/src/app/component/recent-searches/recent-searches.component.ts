@@ -9,11 +9,12 @@ import { UserService } from 'src/app/services/userService/user.service';
 })
 export class RecentSearchesComponent implements OnInit{
 
-  constructor(private trainService:TrainService){}
+  //variable to store the recentSearches
   recentSearches:string[];
+
+  constructor(private trainService:TrainService){}
 
   ngOnInit(): void {
     this.recentSearches=this.trainService.getRecentHistory();
   }
-
 }

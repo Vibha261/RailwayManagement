@@ -1,0 +1,11 @@
+<div class="cancel-container flex flex-column gap">
+    <h1 class="text-center" style="color: red;">Cancel Confirmation</h1>
+    <div class="flex flex-column justify-center">
+        <h2 class="text-center">Are You Sure?</h2>
+        <p class="text-center" style="font-size: 20px;">You want to cancel the Ticket of Booking Id: {{data.id}}</p>
+    </div>
+    <div class="flex flex-row space-between">
+        <button (click)="onConfirm()" class="confirm-button">Confirm</button>
+        <button (click)="onCancel()" class="cancel-button">Cancel</button>
+    </div>
+</div>

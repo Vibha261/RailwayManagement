@@ -8,6 +8,7 @@ import { PassengerList } from 'src/app/shared/models/PassengerList';
 import { PassengerTicket } from 'src/app/shared/models/PassengerTicket';
 import { bookButton } from 'src/app/shared/models/bookButtonSchema';
 import { Register } from 'src/app/shared/models/registerUserSchema';
+import { ToastrService } from 'ngx-toastr';
 
 declare const Razorpay: any;
 
@@ -23,9 +24,11 @@ export class BookingComponent {
   //variable to create a form
   bookingForm: FormGroup;
 
+  //variable to store the ticket Details of the passenger.
   ticketDetails: PassengerTicket;
 
-  currentUser:Register;
+  //variable to store the current logged in user.
+  currentUser: Register;
 
   //variable to store the price of the seat
   fare: number;
@@ -37,7 +40,7 @@ export class BookingComponent {
   platformFee: number = 23;
 
   //use the formBuilder to create the formArray.
-  constructor(private fb: FormBuilder, private router: Router, private userService: UserService, private communicate: CommunicateService, private ticketService:TicketBookingService) { }
+  constructor(private toast: ToastrService, private fb: FormBuilder, private router: Router, private userService: UserService, private communicate: CommunicateService, private ticketService: TicketBookingService) { }
 
   ngOnInit(): void {
     this.subscribeTheBookingTrainDetails();
@@ -45,14 +48,15 @@ export class BookingComponent {
     this.currentUser = this.userService.getCurrentUser();
   }
 
-  subscribeTheBookingTrainDetails():void{
+  //Subscription call to get the data from the booking-ticket component.
+  subscribeTheBookingTrainDetails(): void {
     this.communicate.getBookingData().subscribe(data => {
       if (data) {
         console.log(data);
         this.trainDetails = data;
         this.fare = this.trainDetails.fare;
       }
-   });
+    });
   }
 
   //creating Form to add Passenger Details and initialize the train details corresponding to the click event. 
@@ -86,11 +90,21 @@ export class BookingComponent {
   //function to push the new passenger details in the passenger Array.
   addPassenger(): void {
     this.passengers.push(this.createPassengerFormGroup());
+    this.toast.success("Passenger Added Successfully");
   }
 
+  //function to remove the extra added passengers fields and one field is mandatory.
   removePassenger(index: number): void {
-    this.passengers.removeAt(index);
- }
+    if (this.passengers.length > 1) {
+      this.passengers.removeAt(index);
+      this.toast.success("Passenger Removed Succesfully");
+    }
+    else {
+      console.log("Cannot remove");
+      this.toast.error("Cannot Remove")
+    }
+  }
+
   //function to calculate the fare Price.
   calculateTotalPrice(): number {
     const passengersCount = this.passengers.length;
@@ -100,6 +114,7 @@ export class BookingComponent {
     return totalPrice;
   }
 
+  //function to integrate the payment options iniate on the click.
   onSubmit(): void {
     const RozarpayOptions = {
       description: 'Sample Razorpay demo',
@@ -117,7 +132,7 @@ export class BookingComponent {
       theme: {
         color: '#000000'
       },
-      handler:()=>{
+      handler: () => {
         this.sendTheConfirmedBookedData();
       },
       modal: {
@@ -128,10 +143,12 @@ export class BookingComponent {
     }
     Razorpay.open(RozarpayOptions);
   }
-  sendTheConfirmedBookedData():void{
+
+  //function to be handle after the succesfull confirmation of payments.
+  sendTheConfirmedBookedData(): void {
     const ticketDetails: PassengerTicket = {
-      id:'',
-      userName: this.currentUser.userName, 
+      id: '',
+      userName: this.currentUser.userName,
       trainNumber: this.trainDetails.trainNumber,
       trainName: this.trainDetails.trainName,
       fromStation: this.trainDetails.fromStation,
@@ -151,20 +168,21 @@ export class BookingComponent {
       })),
       phoneNumber: this.bookingForm.get('contact.phoneNumber').value,
       email: this.bookingForm.get('contact.email').value,
-      amount: this.calculateTotalPrice().toString(), 
+      amount: this.calculateTotalPrice().toString(),
       status: ''
-   };
+    };
 
-   this.ticketService.postBooking(ticketDetails).subscribe({
-      next:(response) => {
+    //API call to add the user's ticket details.
+    this.ticketService.postBooking(ticketDetails).subscribe({
+      next: (response) => {
         console.log(response);
-        alert("Ticket Booked Succesfully!");
+        this.toast.success(`Hy ${this.currentUser.userName} Ticket Booked Successfully`)
         this.router.navigate(['/dashboard']);
       },
-      error:(err) => {
+      error: (err) => {
         console.error(err);
       }
     });
-    
+
   }
 }

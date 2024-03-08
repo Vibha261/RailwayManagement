@@ -1,7 +1,7 @@
 <header>
     <img src="../../../../../assets/TrainLogo.png" alt="logo">
     <h1>Indian Railways</h1>
-    <p><a routerLink="/">Home</a>><a routerLink="dashboard">{{trainDetails.userName}}</a> > Booking</p>
+    <p><a routerLink="/">Home</a>><a routerLink="../dashboard">{{trainDetails.userName}}</a> > Booking</p>
 </header>
 
 <div class="booking-container">
@@ -29,7 +29,7 @@
             <p>Available Seats: {{trainDetails.availableSeats}}</p>
             <p>Fare: {{trainDetails.fare}}</p>
         </div>
-        <form [formGroup]="bookingForm" >
+        <form [formGroup]="bookingForm">
             <div formArrayName="passengers" *ngFor="let passenger of passengers.controls; let i = index">
                 <div [formGroupName]="i" class="passenger-info-container">
                     <div>
@@ -61,14 +61,16 @@
                                 <mat-option value="Side-Upper">Side Upper</mat-option>
                             </mat-select>
                         </mat-form-field>
+                        <button (click)="removePassenger(i)"
+                            style="background-color: red;  color:white; height:fit-content; border: none; border-radius: 20px; padding:8px">
+                            X
+                        </button>
                     </div>
                 </div>
-                <button mat-raised-button color="danger" (click)="removePassenger(i)">
-                    <mat-icon color="danger">remove</mat-icon>
-                </button>
             </div>
-            <button mat-button (click)="addPassenger()">Add More Passenger</button>
-            
+            <button mat-button (click)="addPassenger()"
+                style="background-color: rgb(182, 213, 240); box-shadow: 1px 2px black;">Add More Passenger</button>
+
 
             <div formGroupName="contact">
                 <h3>Contact Details</h3>
@@ -84,7 +86,7 @@
 
             <div>
                 <h5>GST Charges: 18%</h5>
-                <h5>Extra Charges: 23</h5>
+                <h5>Extra Charges: INR 23</h5>
                 <h3>Total Price: {{calculateTotalPrice() | currency:'INR':'code'}}</h3>
                 <button mat-raised-button color="primary" (click)="onSubmit()">Pay</button>
             </div>

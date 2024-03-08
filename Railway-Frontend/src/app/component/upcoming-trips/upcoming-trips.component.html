@@ -1,58 +1,72 @@
+<div>
+    <select (change)="filterTrips($event)">
+        <option value="Booked">Booked</option>
+        <option value="Cancelled">Cancelled</option>
+    </select>
+</div>
 <div *ngIf="tripDetails; else noTrips">
-    <mat-card *ngFor="let trip of tripDetails" class="trip-card">
-        <mat-card-header>
-            <mat-card-title>Journey Detail</mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="flex flex-column">
-            <div class="flex flex-row space-between">
-                <div class="flex flex-column gap">
-                    <p><b>Booking Id:</b> {{trip.id}}</p>
-                    <p><b>Train Number:</b> {{ trip.trainNumber }}</p>
-                    <div class="flex flex-column">
-                        <p><b>From:</b> {{ trip.fromStation }}</p>
-                        <p><b>Arrival Time: </b>{{trip.fromStationArrivalTime}}</p>
-                        <p><b>Departure Time:</b> {{ trip.fromStationDepartureTime }}</p>
+    <mat-card *ngFor="let trip of filteredTrips" class="trip-card">
+        <div id="contentToConvert">
+            <mat-card-header>
+                <mat-card-title>Journey Detail</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="flex flex-column">
+                <div class="flex flex-row space-between">
+                    <div class="flex flex-column gap">
+                        <p><b>Booking Id:</b> {{trip.id}}</p>
+                        <p><b>Train Number:</b> {{ trip.trainNumber }}</p>
+                        <div class="flex flex-column">
+                            <p><b>From:</b> {{ trip.fromStation }}</p>
+                            <p><b>Arrival Time: </b>{{trip.fromStationArrivalTime}}</p>
+                            <p><b>Departure Time:</b> {{ trip.fromStationDepartureTime }}</p>
+                        </div>
+                        <p><b>Date of Journey:</b>{{ trip.date }}</p>
+                        <p><b>Phone Number:</b> {{ trip.phoneNumber }}</p>
+                        <p><b>Amount:</b> {{ trip.amount }}</p>
+
                     </div>
-                    <p><b>Date of Journey:</b>{{ trip.date }}</p>
-                    <p><b>Phone Number:</b> {{ trip.phoneNumber }}</p>
-                    <p><b>Amount:</b> {{ trip.amount }}</p>
+                    <div class="flex flex-column gap">
+                        <button *ngIf="trip.status ==='Booked'" (click)="cancelBooking(trip)"
+                            class="cancel-button">Cancel Booking</button>
+                        <p *ngIf="trip.status ==='Cancelled'"><b>Booking Cancelled</b></p>
+                        <p><b>Train Name:</b> {{ trip.trainName }}</p>
+                        <div class="flex flex-column">
+                            <p><b>To:</b> {{ trip.toStation }}</p>
+                            <p><b>Arrival Time:</b> {{ trip.toStationArrivalTime }}</p>
+                            <p><b>Departure Time:</b> {{trip.toStationDepartureTime}}</p>
+                        </div>
+                        <p><b>Class: </b>{{ trip.className }}</p>
+                        <p><b>Email:</b> {{ trip.email }}</p>
+                        <p><b>Status:</b> {{ trip.status }}</p>
+                        <button (click)="savePDF()" class="print-button">Print Ticket</button>
+                    </div>
+                </div>
+                <div class="flex flex-row space-between">
+                    <h4>Passengers</h4>
                     
                 </div>
-                <div class="flex flex-column gap">
-                    <button (click)="cancelBooking(trip.id)">Cancel Booking</button>
-                    <p><b>Train Name:</b> {{ trip.trainName }}</p>
-                    <div class="flex flex-column">
-                        <p><b>To:</b> {{ trip.toStation }}</p>
-                        <p><b>Arrival Time:</b> {{ trip.toStationArrivalTime }}</p>
-                        <p><b>Departure Time:</b> {{trip.toStationDepartureTime}}</p>
-                    </div>
-                    <p><b>Class: </b>{{ trip.className }}</p>
-                    <p><b>Email:</b> {{ trip.email }}</p>
-                    <p><b>Status:</b> {{ trip.status }}</p>
-                </div>
-            </div>
-            <h4>Passengers</h4>
-            <table class="passenger-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Gender</th>
-                        <th>Berth Preference</th>
-                        <th>Seat No</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let passenger of trip.passengers">
-                        <td>{{passenger.name}}</td>
-                        <td>{{passenger.age}}</td>
-                        <td>{{passenger.gender}}</td>
-                        <td>{{passenger.berthPreference}}</td>
-                        <td>{{passenger.seatNo}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </mat-card-content>
+                <table class="passenger-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Berth Preference</th>
+                            <th>Seat No</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let passenger of trip.passengers">
+                            <td>{{passenger.name}}</td>
+                            <td>{{passenger.age}}</td>
+                            <td>{{passenger.gender}}</td>
+                            <td>{{passenger.berthPreference}}</td>
+                            <td>{{passenger.seatNo}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </mat-card-content>
+        </div>
     </mat-card>
 </div>
 

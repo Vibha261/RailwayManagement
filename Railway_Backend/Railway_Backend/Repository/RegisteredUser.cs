@@ -21,10 +21,9 @@ namespace Railway_Backend.Repository
             {
                 return "Username already exists";
             }
-            // Hash the password
+            
             user.Password = HashPassword(user.Password);
 
-            // Save the user to MongoDB
             _users.InsertOne(user);
 
             return "User registered successfully";
@@ -42,13 +41,13 @@ namespace Railway_Backend.Repository
             var user = _users.Find(u => u.UserName == userName).FirstOrDefault();
             if (user == null)
             {
-                return null; // User not found
+                return null; 
             }
 
             var hashedPassword = HashPassword(password);
             if (user.Password != hashedPassword)
             {
-                return null; // Incorrect password
+                return null; 
             }
 
             return user;
@@ -61,7 +60,7 @@ namespace Railway_Backend.Repository
             var update = Builders<User>.Update
                 .Set(u => u.Name, user.Name)
                 .Set(u => u.UserName, user.UserName)
-                .Set(u => u.Password, HashPassword(user.Password)) // Hash the password before updating
+                .Set(u => u.Password, HashPassword(user.Password)) 
                 .Set(u => u.Email, user.Email)
                 .Set(u => u.PhoneNumber, user.PhoneNumber);
 

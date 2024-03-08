@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TrainService } from 'src/app/services/trainService/train.service';
 import { TrainOnStation } from 'src/app/shared/models/trainOnStation';
 import { UserService } from '../../../../services/userService/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class SearchByStationComponent implements OnInit{
   //variable to toggle whether the train details is visible or not.
   trains=false;
 
-  constructor(private stationservice: TrainService, private userService:UserService)
+  constructor(private stationservice: TrainService, private userService:UserService, private toast:ToastrService)
   {
   }
 
@@ -53,7 +54,7 @@ export class SearchByStationComponent implements OnInit{
           console.log(resp);
           if (resp.length === 0) {
             this.trains=false;
-            alert('Invalid station code or no data available for this station code.');
+            this.toast.error('Invalid station code or no data available for this station code.');
           } else {
             this.trainsOnStation = resp;
             console.log(this.trainsOnStation);

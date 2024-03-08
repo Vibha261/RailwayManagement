@@ -79,7 +79,7 @@ mat-card {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 900px;
-    height: 500px;
+    height: auto;
 }
 
 mat-card-content {
@@ -91,4 +91,40 @@ mat-card-content {
         height: 400px;
         width: auto;
     }
+}
+.heading-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.train-headings{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    // text-align: center;
+}
+
+.train-progress{
+    display: flex;
+    margin-top: 30px;
+
+}
+.live-status{
+    font-size: 20px;
+    color: red;
+}
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+}
+.gap{
+    gap:20px
+}
+.space-evenly{
+    justify-content: space-evenly;
 }

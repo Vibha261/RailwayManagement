@@ -4,6 +4,7 @@ import { TrainService } from 'src/app/services/trainService/train.service';
 import { Train } from 'src/app/shared/models/trainSchema';
 import { UserService } from '../../../../services/userService/user.service';
 import { Register } from 'src/app/shared/models/registerUserSchema';
+import { ToastrService } from 'ngx-toastr';
 
 
 
@@ -23,7 +24,7 @@ export class SearchByTrainNumberComponent {
   //variable to store the trains data.
   trains: Train[];
 
-  constructor(private trainservice: TrainService, private userService: UserService) {
+  constructor(private trainservice: TrainService, private userService: UserService, private toast: ToastrService) {
   }
 
   ngOnInit(): void {
@@ -53,7 +54,7 @@ export class SearchByTrainNumberComponent {
           this.trainservice.recentHistoryOneParam(trainNumber);
           // console.log(data);
           if (data.length === 0) {
-            alert('Invalid train number or no data available for this train number.');
+            this.toast.error('Invalid train number or no data available for this train number.');
             this.trainVisible = false;
           }
           else {

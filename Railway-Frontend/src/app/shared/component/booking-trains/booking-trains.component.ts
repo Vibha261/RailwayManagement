@@ -12,6 +12,7 @@ import { UserService } from 'src/app/services/userService/user.service';
 import { CommunicateService } from 'src/app/services/communicate/communicate.service';
 import { Subscription } from 'rxjs';
 import { bookButton } from '../../models/bookButtonSchema';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-booking-trains',
@@ -42,7 +43,7 @@ export class BookingTrainsComponent implements OnInit {
   //variable to store the selected Train Number
   selectedTrainNumber: string
 
-  constructor(private router: Router, private trainService: TrainService, private dialog: MatDialog, private userservice: UserService, private communicate: CommunicateService) { }
+  constructor(private router: Router, private trainService: TrainService, private dialog: MatDialog, private userservice: UserService, private communicate: CommunicateService, private toast: ToastrService) { }
 
   ngOnInit(): void {
     this.subscribingTheSearchFormValues();
@@ -112,7 +113,7 @@ export class BookingTrainsComponent implements OnInit {
       next: (data) => {
         console.log(data);
         if (data === null) {
-          alert('Seats Data is not available');
+          this.toast.error('Seats Data is not available');
         } else {
           this.seats = data;
           this.seatsInClass = this.seats.classes;
@@ -122,7 +123,7 @@ export class BookingTrainsComponent implements OnInit {
       },
       error: (err) => {
         console.log('error while fetching the seat data: ', err);
-        alert('Seats Data is not available');
+        this.toast.error('Seats Data is not available');
       }
     });
   }
@@ -140,13 +141,13 @@ export class BookingTrainsComponent implements OnInit {
     else {
       const train = this.trainDetails.find(t => t.trainNumber === trainNumber);
       if (!train) {
-        alert('Train not found');
+        this.toast.error('Train not found');
         return;
       }
 
       const seatClass = this.seatsInClass.find(sc => sc.className === className);
       if (!seatClass) {
-        alert('Seat class not found');
+        this.toast.error('Seat class not found');
         return;
       }
 

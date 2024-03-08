@@ -5,6 +5,7 @@ import { Train } from 'src/app/shared/models/trainSchema';
 import { Station } from 'src/app/shared/models/stationSchema';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/userService/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -26,7 +27,7 @@ export class TrainScheduleComponent implements OnInit {
   //variable to store the station list data
   routeList: Station[] = [];
 
-  constructor(private trainservice: TrainService, private route: ActivatedRoute, private userService: UserService) {
+  constructor(private toast: ToastrService, private trainservice: TrainService, private route: ActivatedRoute, private userService: UserService) {
   }
 
   ngOnInit(): void {
@@ -75,7 +76,7 @@ export class TrainScheduleComponent implements OnInit {
         this.trainservice.recentHistoryOneParam(trainNumberOrName);
 
         if (resp.length === 0) {
-          alert('Invalid train number or no data available for this train number.');
+          this.toast.error('Invalid train number or no data available for this train number.');
           this.trainRouteVisible = false;
         }
         else {

@@ -4,6 +4,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userService/user.service';
 import { Register } from 'src/app/shared/models/registerUserSchema';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-edit-profile',
@@ -23,7 +24,7 @@ export class EditProfileComponent {
   //variable to store the updated information of my current user
   updateUserData: Register  = new Register(null, null, null, null, null, null);
 
-  constructor(public dialogRef: MatDialogRef<EditProfileComponent>, public dialog: MatDialog, public userService: UserService, private router: Router) { }
+  constructor(public toast: ToastrService, public dialogRef: MatDialogRef<EditProfileComponent>, public dialog: MatDialog, public userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     //initializing my current user to the variable.
@@ -44,7 +45,7 @@ export class EditProfileComponent {
         password: new FormControl('', Validators.required)
       });
     } else {
-      alert("Error");
+      this.toast.error("Invalid");
     }
   }
 
@@ -103,7 +104,7 @@ export class EditProfileComponent {
         }
         else {
           this.updateUserData.password = this.currentUser.password;
-          // alert("You are using Old Password.")
+          this.toast.show("You are using Old Password")
         }
 
         //Posting updated data to the backed using UserService API Call.
@@ -111,13 +112,13 @@ export class EditProfileComponent {
           next: (response) => {
             console.log(this.updateUserData);
             console.log(response);
-            alert(this.editForm.get('name').value + " updated successfully.");
+            this.toast.success(`${this.editForm.get('name').value} updated successfully.`);
             this.userService.setCurrentUser(this.updateUserData);
-            window.location.reload();
+            this.dialogRef.close(true);
           },
           error: (err) => {
             console.error('Error updating user:', err);
-            alert("Updation Fail.");
+            this.toast.error("Updation Fail");
           }
         });
       }
@@ -132,13 +133,13 @@ export class EditProfileComponent {
       this.userService.deleteUser(this.currentUser.id).subscribe({
         next: (response) => {
           console.log('User deleted successfully');
-          alert("Account Deleted Successfully.")
+          this.toast.success("Account Deleted Successfully");
           this.dialogRef.close();
           this.router.navigate(['/']); // Redirect to the home page
         },
         error: (err) => {
           console.error('Error deleting user:', err);
-          alert("Not Able to Delete the Account. Server is facing some issues.")
+          this.toast.error("Not Able to Delete the Account. Server is facing some issues.");
         }
       });
     }

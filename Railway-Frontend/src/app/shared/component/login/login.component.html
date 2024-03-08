@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" (submit)="onSignIn()">
+<form [formGroup]="loginForm">
     <h1>Sign In</h1>
     <mat-form-field appearance="outline">
         <mat-label>Username</mat-label>
@@ -8,7 +8,8 @@
         <mat-label>Password</mat-label>
         <input matInput type="password" formControlName="password">
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit" (click)="onSignIn()">Sign In</button>
+    <button mat-raised-button color="primary"  (click)="onSignIn()">Sign In</button>
+    <button mat-raised-button color="accent"  (click)="newUser()">New User</button>
 </form>
 
 
