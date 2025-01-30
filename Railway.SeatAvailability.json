@@ -1,0 +1,1384 @@
+[{
+  "_id": {
+    "$oid": "65e1dec06e4ae7af98261adb"
+  },
+  "trainNumber": "22655",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-19": 3,
+        "2024-03-23": 5,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-12": 5,
+        "2024-05-16": 17,
+        "2024-03-29": 2,
+        "2024-03-19": 1,
+        "2024-03-23": 1,
+        "2024-03-30": 0,
+        "2024-03-27": 0
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-15": 1,
+        "2024-03-19": 2,
+        "2024-03-23": 2,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-07": 8,
+        "2024-03-11": 1,
+        "2024-05-15": 2
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e1e1c26e4ae7af98261adc"
+  },
+  "trainNumber": "20802",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9832184b01b44fb6e4b34"
+  },
+  "trainNumber": "08407",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9834584b01b44fb6e4b35"
+  },
+  "trainNumber": "57550",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-19": 3,
+        "2024-03-23": 5,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-12": 5,
+        "2024-05-16": 17,
+        "2024-03-29": 2,
+        "2024-03-19": 1,
+        "2024-03-23": 1,
+        "2024-03-30": 0,
+        "2024-03-27": 0
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-15": 1,
+        "2024-03-19": 2,
+        "2024-03-23": 2,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-07": 8,
+        "2024-03-11": 1,
+        "2024-05-15": 2
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9836284b01b44fb6e4b36"
+  },
+  "trainNumber": "15071",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-19": 3,
+        "2024-03-23": 5,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-12": 5,
+        "2024-05-16": 17,
+        "2024-03-29": 2,
+        "2024-03-19": 1,
+        "2024-03-23": 1,
+        "2024-03-30": 0,
+        "2024-03-27": 0
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-15": 1,
+        "2024-03-19": 2,
+        "2024-03-23": 2,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-07": 8,
+        "2024-03-11": 1,
+        "2024-05-15": 2
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9838384b01b44fb6e4b37"
+  },
+  "trainNumber": "56502",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9841c84b01b44fb6e4b38"
+  },
+  "trainNumber": "12243",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9845784b01b44fb6e4b39"
+  },
+  "trainNumber": "12155",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9848084b01b44fb6e4b3a"
+  },
+  "trainNumber": "07418",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9849984b01b44fb6e4b3b"
+  },
+  "trainNumber": "12807",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9,
+        "2024-03-08": 0
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6,
+        "2024-03-08": 0
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e984a984b01b44fb6e4b3c"
+  },
+  "trainNumber": "12116",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e984be84b01b44fb6e4b3d"
+  },
+  "trainNumber": "12197",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e984d484b01b44fb6e4b3e"
+  },
+  "trainNumber": "22957",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9858684b01b44fb6e4b3f"
+  },
+  "trainNumber": "16382",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9859e84b01b44fb6e4b40"
+  },
+  "trainNumber": "16796",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e985bb84b01b44fb6e4b41"
+  },
+  "trainNumber": "12213",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e985ca84b01b44fb6e4b42"
+  },
+  "trainNumber": "22832",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e985df84b01b44fb6e4b43"
+  },
+  "trainNumber": "12859",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e985f784b01b44fb6e4b44"
+  },
+  "trainNumber": "59821",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9860b84b01b44fb6e4b45"
+  },
+  "trainNumber": "22605",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9865c84b01b44fb6e4b46"
+  },
+  "trainNumber": "12621",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9867484b01b44fb6e4b47"
+  },
+  "trainNumber": "22455",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-18": 10,
+        "2024-03-16": 9
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 6
+      }
+    },
+    {
+      "className": "acChairCar",
+      "availableSeats": 200,
+      "fare": 800,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e986aa84b01b44fb6e4b48"
+  },
+  "trainNumber": "12627",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-19": 3,
+        "2024-03-23": 5,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-12": 5,
+        "2024-05-16": 17,
+        "2024-03-29": 2,
+        "2024-03-19": 1,
+        "2024-03-23": 1,
+        "2024-03-30": 0,
+        "2024-03-27": 0
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-15": 1,
+        "2024-03-19": 2,
+        "2024-03-23": 2,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-07": 8,
+        "2024-03-11": 1,
+        "2024-05-15": 2
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e986e784b01b44fb6e4b49"
+  },
+  "trainNumber": "12721",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-19": 3,
+        "2024-03-23": 5,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-12": 5,
+        "2024-05-16": 17,
+        "2024-03-29": 2,
+        "2024-03-19": 1,
+        "2024-03-23": 1,
+        "2024-03-30": 0,
+        "2024-03-27": 0
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-15": 1,
+        "2024-03-19": 2,
+        "2024-03-23": 2,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-07": 8,
+        "2024-03-11": 1,
+        "2024-05-15": 2
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e986f884b01b44fb6e4b4a"
+  },
+  "trainNumber": "12647",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-19": 3,
+        "2024-03-23": 5,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-12": 5,
+        "2024-05-16": 17,
+        "2024-03-29": 2,
+        "2024-03-19": 1,
+        "2024-03-23": 1,
+        "2024-03-30": 0,
+        "2024-03-27": 0
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-15": 1,
+        "2024-03-19": 2,
+        "2024-03-23": 2,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-07": 8,
+        "2024-03-11": 1,
+        "2024-05-15": 2
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e9870b84b01b44fb6e4b4b"
+  },
+  "trainNumber": "12723",
+  "classes": [
+    {
+      "className": "sleeper",
+      "availableSeats": 250,
+      "fare": 450,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-19": 3,
+        "2024-03-23": 5,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "ac3tier",
+      "availableSeats": 150,
+      "fare": 990,
+      "bookedSeats": {
+        "2024-04-12": 5,
+        "2024-05-16": 17,
+        "2024-03-29": 2,
+        "2024-03-19": 1,
+        "2024-03-23": 1,
+        "2024-03-30": 0,
+        "2024-03-27": 0
+      }
+    },
+    {
+      "className": "ac2tier",
+      "availableSeats": 70,
+      "fare": 1500,
+      "bookedSeats": {
+        "2024-04-12": 10,
+        "2024-05-15": 1,
+        "2024-03-19": 2,
+        "2024-03-23": 2,
+        "2024-03-30": 0
+      }
+    },
+    {
+      "className": "acFirstClass",
+      "availableSeats": 50,
+      "fare": 2270,
+      "bookedSeats": {
+        "2024-05-16": 9,
+        "2024-03-29": 1,
+        "2024-03-07": 8,
+        "2024-03-11": 1,
+        "2024-05-15": 2
+      }
+    }
+  ]
+}]

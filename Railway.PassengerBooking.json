@@ -1,0 +1,479 @@
+[{
+  "_id": {
+    "$oid": "65e85bc56d5a2276ae74b438"
+  },
+  "userName": "Vibha03",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "TVC",
+  "fromStationArrivalTime": "--",
+  "fromStationDepartureTime": "01:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-23",
+  "className": "sleeper",
+  "passenger": [
+    {
+      "name": "test",
+      "age": 43,
+      "gender": "Male",
+      "berthPreference": "Side-Upper",
+      "seatNo": 55
+    },
+    {
+      "name": "er",
+      "age": 45,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 56
+    }
+  ],
+  "phoneNumber": "09876543218",
+  "email": "hiranshi@gmail.com",
+  "amount": "1085",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-06T12:04:21.662Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65e864f06d5a2276ae74b439"
+  },
+  "userName": "Vibha03",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "TVC",
+  "fromStationArrivalTime": "--",
+  "fromStationDepartureTime": "01:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-23",
+  "className": "sleeper",
+  "passenger": [
+    {
+      "name": "test",
+      "age": 20,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 80
+    }
+  ],
+  "phoneNumber": "08976543210",
+  "email": "vibha@gmail.com",
+  "amount": "554",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-06T12:43:28.561Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65e8654d6d5a2276ae74b43a"
+  },
+  "userName": "Vibha03",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "TVC",
+  "fromStationArrivalTime": "--",
+  "fromStationDepartureTime": "01:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-23",
+  "className": "ac3tier",
+  "passenger": [
+    {
+      "name": "test",
+      "age": 20,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 27
+    }
+  ],
+  "phoneNumber": "08976543210",
+  "email": "vibha@gmail.com",
+  "amount": "1191.2",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-06T12:45:01.193Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65e87ae20402b3102900545e"
+  },
+  "userName": "Chirag03",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "TVC",
+  "fromStationArrivalTime": "--",
+  "fromStationDepartureTime": "01:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-23",
+  "className": "ac2tier",
+  "passenger": [
+    {
+      "name": "Vibha Sengar",
+      "age": 23,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 37
+    },
+    {
+      "name": "Hiranshi Shah",
+      "age": 45,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 38
+    }
+  ],
+  "phoneNumber": "09582718781",
+  "email": "Vibha.Sengar@chubb.com",
+  "amount": "3563",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-06T14:17:06.253Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65e881601e3b02dcc9f0659d"
+  },
+  "userName": "Chirag03",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "TVC",
+  "fromStationArrivalTime": "--",
+  "fromStationDepartureTime": "01:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-30",
+  "className": "ac2tier",
+  "passenger": [
+    {
+      "name": "Vibha Sengar",
+      "age": 23,
+      "gender": "Female",
+      "berthPreference": "Side-Lower",
+      "seatNo": 52
+    },
+    {
+      "name": "Hiranshi Shah",
+      "age": 20,
+      "gender": "Female",
+      "berthPreference": "Lower",
+      "seatNo": 53
+    }
+  ],
+  "phoneNumber": "09582718781",
+  "email": "Vibha.Sengar@chubb.com",
+  "amount": "3563",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-06T14:44:47.971Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65e881e32d5a55e976f8b638"
+  },
+  "userName": "Chirag03",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "TVC",
+  "fromStationArrivalTime": "--",
+  "fromStationDepartureTime": "01:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-30",
+  "className": "sleeper",
+  "passenger": [
+    {
+      "name": "test",
+      "age": 65,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 13
+    }
+  ],
+  "phoneNumber": "08976543210",
+  "email": "vibha@gmail.com",
+  "amount": "554",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-06T14:46:59.190Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65e8a1402d5a55e976f8b63b"
+  },
+  "userName": "Swastik03",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "TVC",
+  "fromStationArrivalTime": "--",
+  "fromStationDepartureTime": "01:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-30",
+  "className": "ac3tier",
+  "passenger": [
+    {
+      "name": "Swastik",
+      "age": 24,
+      "gender": "Male",
+      "berthPreference": "Side-Lower",
+      "seatNo": 28
+    },
+    {
+      "name": "Rishi",
+      "age": 23,
+      "gender": "Male",
+      "berthPreference": "Side-Lower",
+      "seatNo": 29
+    }
+  ],
+  "phoneNumber": "09582718781",
+  "email": "Vibha.Sengar@chubb.com",
+  "amount": "2359.4",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-06T17:00:48.231Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65e94f96d454afb38e451aa9"
+  },
+  "userName": "Chirag03",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "TVC",
+  "fromStationArrivalTime": "--",
+  "fromStationDepartureTime": "01:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-27",
+  "className": "ac3tier",
+  "passenger": [
+    {
+      "name": "Priyanka",
+      "age": 23,
+      "gender": "Female",
+      "berthPreference": "Lower",
+      "seatNo": 68
+    },
+    {
+      "name": "Vibha",
+      "age": 23,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 69
+    }
+  ],
+  "phoneNumber": "08976543210",
+  "email": "vibha@gmail.com",
+  "amount": "2359.4",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-07T05:24:38.765Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65e9fd31b4302bc3a1e3e6a1"
+  },
+  "userName": "Aditya03",
+  "trainNumber": "12807",
+  "trainName": "SAMTA EXPRESS",
+  "fromStation": "BPL",
+  "fromStationArrivalTime": "05:55",
+  "fromStationDepartureTime": "06:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "16:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-08",
+  "className": "acFirstClass",
+  "passenger": [
+    {
+      "name": "Aditya Atbhaiya",
+      "age": 21,
+      "gender": "Male",
+      "berthPreference": "Lower",
+      "seatNo": 9
+    },
+    {
+      "name": "Vibha Sengar",
+      "age": 20,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 10
+    }
+  ],
+  "phoneNumber": "9582718781",
+  "email": "vibha@gmail.com",
+  "amount": "5380.2",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-07T17:45:21.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65eaabd36435fb6fcbc87876"
+  },
+  "userName": "Tester02",
+  "trainNumber": "12807",
+  "trainName": "SAMTA EXPRESS",
+  "fromStation": "BPL",
+  "fromStationArrivalTime": "05:55",
+  "fromStationDepartureTime": "06:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "16:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-08",
+  "className": "sleeper",
+  "passenger": [
+    {
+      "name": "Vibha Sengar",
+      "age": 23,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 56
+    }
+  ],
+  "phoneNumber": "08976543210",
+  "email": "vibha@gmail.com",
+  "amount": "554",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-08T06:10:27.242Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "660900c7470ea18ae665e9ea"
+  },
+  "userName": "anamika01",
+  "trainNumber": "12807",
+  "trainName": "SAMTA EXPRESS",
+  "fromStation": "BPL",
+  "fromStationArrivalTime": "05:55",
+  "fromStationDepartureTime": "06:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "16:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-08",
+  "className": "ac3tier",
+  "passenger": [
+    {
+      "name": "Vibha",
+      "age": 21,
+      "gender": "Female",
+      "berthPreference": "Lower",
+      "seatNo": 47
+    },
+    {
+      "name": "Parthivi",
+      "age": 22,
+      "gender": "Female",
+      "berthPreference": "Side-Lower",
+      "seatNo": 48
+    },
+    {
+      "name": "Anamika",
+      "age": 20,
+      "gender": "Female",
+      "berthPreference": "Side-Upper",
+      "seatNo": 49
+    }
+  ],
+  "phoneNumber": "9876543218",
+  "email": "anamika@gmail.com",
+  "amount": "3527.6",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-03-31T06:20:55.765Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6616dacc087c9281839a8200"
+  },
+  "userName": "Tester01",
+  "trainNumber": "12807",
+  "trainName": "SAMTA EXPRESS",
+  "fromStation": "BPL",
+  "fromStationArrivalTime": "05:55",
+  "fromStationDepartureTime": "06:00",
+  "toStation": "NZM",
+  "toStationArrivalTime": "16:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-08",
+  "className": "ac2tier",
+  "passenger": [
+    {
+      "name": "Vibha Sengar",
+      "age": 20,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 2
+    }
+  ],
+  "phoneNumber": "09582718781",
+  "email": "Vibha.Sengar@chubb.com",
+  "amount": "1793",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-04-10T18:30:36.630Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6626b74e1d67cb1671376153"
+  },
+  "userName": "User1",
+  "trainNumber": "22655",
+  "trainName": "TVC NZM EXPRESS",
+  "fromStation": "NZM",
+  "fromStationArrivalTime": "01:45",
+  "fromStationDepartureTime": "--",
+  "toStation": "NZM",
+  "toStationArrivalTime": "01:45",
+  "toStationDepartureTime": "--",
+  "date": "2024-03-08",
+  "className": "acFirstClass",
+  "passenger": [
+    {
+      "name": "Tester1",
+      "age": 20,
+      "gender": "Female",
+      "berthPreference": "Lower",
+      "seatNo": 84
+    },
+    {
+      "name": "Tester2",
+      "age": 21,
+      "gender": "Female",
+      "berthPreference": "Middle",
+      "seatNo": 85
+    }
+  ],
+  "phoneNumber": "9876543210",
+  "email": "user@gmail.com",
+  "amount": "5380.2",
+  "status": "Cancelled",
+  "bookingDate": {
+    "$date": "2024-04-22T19:15:26.088Z"
+  }
+}]

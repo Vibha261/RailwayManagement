@@ -1,0 +1,130 @@
+[{
+  "_id": {
+    "$oid": "65e62f5b7d66c9e0006ea8d1"
+  },
+  "name": "Vibha Sengar",
+  "userName": "Vibha03",
+  "password": "88942abf69ec79f78e9b6a179d58ae3373e398fa3a2b6b7af63fe346a1eb2e56",
+  "email": "vibhasengar03@gmail.com",
+  "phoneNo": "7011343027"
+},
+{
+  "_id": {
+    "$oid": "65e6317b7d66c9e0006ea8d2"
+  },
+  "name": "Nandini Jain",
+  "userName": "Nandini.jain",
+  "password": "508c4487729e2bc5f1fadf388aa07d455a7fcb151f695c4707441ad15394bbc0",
+  "email": "nandini@gmail.com",
+  "phoneNo": "8765432198"
+},
+{
+  "_id": {
+    "$oid": "65e6f531961b9bce33b2046b"
+  },
+  "name": "akshat",
+  "userName": "AKSHAT",
+  "password": "56a693e59531c017e6e14643f417e4a6a39b0ed81171e5d7cbd6b42228bb9e40",
+  "email": "asd@sdkjfds",
+  "phoneNo": "939339"
+},
+{
+  "_id": {
+    "$oid": "65e6f609961b9bce33b2046c"
+  },
+  "name": "akshat",
+  "userName": "akshat1",
+  "password": "86d0aafc8ccb8df335f8755ea7cef6bdbd721ccb2b0161eff2c16fc5cf6f7291",
+  "email": "akshat@akshat.akshat",
+  "phoneNo": "87987987"
+},
+{
+  "_id": {
+    "$oid": "65e81ee06807ebac490a3b20"
+  },
+  "name": "Ritesh",
+  "userName": "Ritesh90",
+  "password": "c8bfe3ac8fcfbbb1a0833bdb86022f05804d074e5762b606db6e67389fd98486",
+  "email": "ritesh@gmail.com",
+  "phoneNo": "9876543210"
+},
+{
+  "_id": {
+    "$oid": "65e85af16d5a2276ae74b437"
+  },
+  "name": "Hello",
+  "userName": "hello3",
+  "password": "88942abf69ec79f78e9b6a179d58ae3373e398fa3a2b6b7af63fe346a1eb2e56",
+  "email": "hello@gmail.com",
+  "phoneNo": "0987654321"
+},
+{
+  "_id": {
+    "$oid": "65e87a6d0402b3102900545d"
+  },
+  "name": "Chirag Raw",
+  "userName": "Chirag03",
+  "password": "86dc0f0111c77a0921fc136d8812bebdd3c78fa438c31f77e2938d2ee4d43e09",
+  "email": "chirag@gmail.com",
+  "phoneNo": "897653246"
+},
+{
+  "_id": {
+    "$oid": "65ea187eb4302bc3a1e3e6a2"
+  },
+  "name": "Vibha Sengar",
+  "userName": "Vibha2034",
+  "password": "13978e339451b0ae2aa3321ae4fe45c45429e09a0035dbb41413e63c98907c47",
+  "email": "vibha@gmail.com",
+  "phoneNo": "9876543312"
+},
+{
+  "_id": {
+    "$oid": "65eaab4c6435fb6fcbc87875"
+  },
+  "name": "Vibha Sengar",
+  "userName": "Tester02",
+  "password": "1c0556220e5396b614f66b1d196074f91980c9e9bce4d24b125b1369505d0586",
+  "email": "tester2@gmail.com",
+  "phoneNo": "9876543211"
+},
+{
+  "_id": {
+    "$oid": "6606abd5470ea18ae665e9e8"
+  },
+  "name": "Vibha",
+  "userName": "Tester01",
+  "password": "6313589c613229b36b90274f29be8717676d5fe7137b02878da8c552fa320c37",
+  "email": "tester2@gmail.com",
+  "phoneNo": "9876543211"
+},
+{
+  "_id": {
+    "$oid": "66090010470ea18ae665e9e9"
+  },
+  "name": "Anamika Mittal",
+  "userName": "anamika01",
+  "password": "9ea3f896371b842116eeb815572f53fbfa9fbcfcd5819ae3df84613db5342a18",
+  "email": "anamika@gmail.com",
+  "phoneNo": "9876543218"
+},
+{
+  "_id": {
+    "$oid": "66096c746941de8b998af343"
+  },
+  "name": "Hiranshi Shah",
+  "userName": "vibha2032",
+  "password": "ea9f6a7a2b5f06ef8b5ff6d74c5cff486ea426d97028ad36404a64da0848a17c",
+  "email": "hiranshi@gmail.com",
+  "phoneNo": "9876543218"
+},
+{
+  "_id": {
+    "$oid": "6626b4931d67cb1671376152"
+  },
+  "name": "Demo User",
+  "userName": "User1",
+  "password": "27a534a25cf745b6c985eb782079a6fe8641b00003dada14f392a2d01b9c790a",
+  "email": "user@gmail.com",
+  "phoneNo": "9876543210"
+}]
