@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "65e08da1a60cdeef687a89d0"
+  },
+  "trainName": "NGP SDL EXPRESS",
+  "trainNumber": "11201",
+  "from": "NAGPUR",
+  "to": "SHAHDOL",
+  "date": "22-04-2024"
+},
+{
+  "_id": {
+    "$oid": "65e08e4ee5435cb0ad2243dd"
+  },
+  "trainName": "AMBIKAPUR EXPRES",
+  "trainNumber": "11265",
+  "from": "JABALPUR",
+  "to": "AMBIKAPUR",
+  "date": "22-04-2024"
+},
+{
+  "_id": {
+    "$oid": "65e08ebbffc80905efd2fa35"
+  },
+  "trainName": "KAIFIYAT EXP",
+  "trainNumber": "12226",
+  "from": "DELHI JN.",
+  "to": "AZAMGARH",
+  "date": "22-04-2024"
+},
+{
+  "_id": {
+    "$oid": "65e08ef438d65c05ce6b8eec"
+  },
+  "trainName": "CDG ASR SUP",
+  "trainNumber": "12241",
+  "from": "CHANDIGARH",
+  "to": "AMRITSAR JN",
+  "date": "22-04-2024"
+}]

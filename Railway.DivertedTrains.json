@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "65e090851e06d86ed3280578"
+  },
+  "trainName": "TATA YPR WEEKLY EXP",
+  "trainNumber": "18111",
+  "from": "TATANAGAR JN",
+  "to": "YASVANTPUR JN",
+  "date": "28-02-2024",
+  "divertedFrom": "NIDADAVOLU JN",
+  "divertedTo": "VIJAYAWADA JN"
+},
+{
+  "_id": {
+    "$oid": "65e090ef8337a559e55e17b1"
+  },
+  "trainName": "DHANBAD ALLEPY EXPRESS",
+  "trainNumber": "13351",
+  "from": "DHANBAD JN",
+  "to": "ALAPPUZHA",
+  "date": "28-02-2024",
+  "divertedFrom": "NIDADAVOLU JN",
+  "divertedTo": "VIJAYAWADA JN"
+},
+{
+  "_id": {
+    "$oid": "65e09130aa102daaa5c9718e"
+  },
+  "trainName": "VSKP NZM SAMTA EXP",
+  "trainNumber": "12807",
+  "from": "VISAKHAPATNAM",
+  "to": "HAZRAT NIZAMUDDIN JN",
+  "date": "28-02-2024",
+  "divertedFrom": "GOPALA PATNAM",
+  "divertedTo": "NAGPUR"
+},
+{
+  "_id": {
+    "$oid": "65e09187e5e7d5d79849b804"
+  },
+  "trainName": "PUI ADI S F EXP",
+  "trainNumber": "12843",
+  "from": "PURI",
+  "to": "AHMEDABAD JN",
+  "date": "28-02-2024",
+  "divertedFrom": "KHURDA ROAD JN",
+  "divertedTo": "TITLAGARH"
+},
+{
+  "_id": {
+    "$oid": "65e091efba1668bc9d6b9d74"
+  },
+  "trainName": "BBS JNRD SUF",
+  "trainNumber": "20837",
+  "from": "BHUBANESWAR",
+  "to": "JUNAGARH ROAD",
+  "date": "28-02-2024",
+  "divertedFrom": "BHUBANESWAR",
+  "divertedTo": "JUNAGARH ROAD"
+},
+{
+  "_id": {
+    "$oid": "65e0923899d3b4513f0287d9"
+  },
+  "trainName": "GHY HWH SARAIGHAT EXP",
+  "trainNumber": "12346",
+  "from": "GUWAHATI",
+  "to": "HOWRAH JN",
+  "date": "28-02-2024",
+  "divertedFrom": "KAMAKHYA",
+  "divertedTo": "NEW BONGAIGAON"
+},
+{
+  "_id": {
+    "$oid": "65e092506fe5351015e776d0"
+  },
+  "trainName": "GHY HWH SARAIGHAT EXP",
+  "trainNumber": "12346",
+  "from": "GUWAHATI",
+  "to": "HOWRAH JN",
+  "date": "28-02-2024",
+  "divertedFrom": "KAMAKHYA",
+  "divertedTo": "NEW BONGAIGAON"
+}]
